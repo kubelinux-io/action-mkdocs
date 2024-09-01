@@ -25,11 +25,5 @@ RUN pip3 install \
     pymdown-extensions && \
     pip3 cache purge
 
-# Add a non-privileged user to build sites with.
-RUN adduser -S mkdocs
-
-# Change to the non-privileged user.
-USER mkdocs
-
 # Change the command to use mkdocs by default.
 CMD [ "/usr/local/bin/mkdocs" ]
